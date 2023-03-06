@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <section class="tools">
+            <div class="row">
+                <label class="title">Shape</label>
+                <ul class="options">
+                    <li class="option active tool" id="rectangle">
+                        <img src="icons/rectangle.svg" alt="">
+                        <span>Rectangle</span>
+                    </li>
+
+                    <li class="option tool" id="ellipse">
+                        <img src="icons/circle.svg" alt="">
+                        <span>Elipse</span>
+                    </li>
+                    
+                    <li class="option tool" id="line">
+                        <img src="icons/line.png" alt="">
+                        <span>Line</span>
+                    </li>
+
+                    <li class="option">
+                        <input type="checkbox" id="fill-color">
+                        <label for="fill-color">Fill color</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <label class="title">Options</label>
+                <ul class="options">
+
+                    <li class="option tool" id="hand">
+                        <img src="icons/hand.png" alt="">
+                        <span>Hand</span>
+                    </li>
+
+                    <li class="option tool" id="brush">
+                        <img src="icons/brush.svg" alt="">
+                        <span>Brush</span>
+                    </li>
+
+                    <li class="option tool" id="eraser">
+                        <img src="icons/eraser.svg" alt="">
+                        <span>Eraser</span>
+                    </li>
+
+
+                </ul>
+            </div>
+            
+            <div class="row">
+                <label class="title">Size</label>
+                <ul class="size-slider">
+                    <li class="option">
+                        <input type="range" id="size-slider" min="1" max="100" value="1">
+                        <label id="size-slider-label">1%</label>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="row colors">
+                <label class="title">Colors</label>
+                <ul class="options">
+                    <li class="option"></li>
+                    <li class="option selected"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option">
+                        <input type="color" id="color-picker" value="#4A98F7">
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="row buttons">
+              <button class="clear-canvas">Clear Canvas</button>
+              <button class="save-img">Save As Image</button>
+            </div>
+        </section>
+        
+        <section class="drawing-board">
+            <svg id='svg'  xmlns="http://www.w3.org/2000/svg">
+                <rect id="rect-selector" xmlns = "http://www.w3.org/2000/svg" stroke = 'blue'  stroke-dasharray="5,5" fill="green" fill-opacity="0.3" display = "none"></rect>
+                <ellipse id="ellipse-selector" xmlns = "http://www.w3.org/2000/svg" stroke = 'blue'  stroke-dasharray="5,5" fill="green" fill-opacity="0.3" display = "none"></ellipse>
+                <line id = "line-selector" xmlns = "http://www.w3.org/2000/svg" stroke = 'blue'  stroke-dasharray="5,5" fill="green" fill-opacity="0.3" display = "none"></line>                
+            </svg>
+        </section>
+    </div>
+</body>
+</html>
